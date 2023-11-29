@@ -31,5 +31,7 @@ export class ActivepostsComponent implements OnInit {
         return '';
     }
   }
-  buttonActive() {}
+  buttonActive(post: any): void {
+    post.active = false;
+  }
 }
