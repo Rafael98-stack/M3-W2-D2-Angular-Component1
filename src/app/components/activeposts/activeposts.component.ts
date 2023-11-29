@@ -15,5 +15,21 @@ export class ActivepostsComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.posts = this.postSrv.getPosts();
+  }
+
+  getPostClass(postType: string): string {
+    switch (postType) {
+      case 'news':
+        return 'bg-warning';
+      case 'politic':
+        return 'text-bg-dark';
+      case 'education':
+        return 'text-bg-primary';
+      default:
+        return '';
+    }
+  }
+  buttonActive() {}
 }
